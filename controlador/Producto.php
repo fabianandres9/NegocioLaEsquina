@@ -63,7 +63,7 @@ class Producto extends conexion{
 
  public function IngresarProducto(){
    
-      $this->consultaBd("insert into producto values(( idProducto = idProducto),'".$this->getNombre()."','".$this->getCantidad()."','".$this->getPrecio()."','".$this->getProveedor()."',1,'".$this->getSubtipo()."')");
+      $this->consultaBd("insert into producto values(( idProducto = idProducto + 1),'".$this->getNombre()."','".$this->getCantidad()."','".$this->getPrecio()."','".$this->getProveedor()."',1,'".$this->getSubtipo()."')");
 			return "Producto Ingresado Correctamente..";
 }
 

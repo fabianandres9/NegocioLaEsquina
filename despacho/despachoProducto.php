@@ -14,12 +14,12 @@ switch ($_REQUEST['action']) {
 		echo $pro->IngresarProducto();
 		break;
 
-		case 'EliminarProveedor':
-		echo $pro->EliminarProveedor($_REQUEST['runProveedor']);
+		case 'EliminarProducto':
+		echo $pro->EliminarProducto($_REQUEST['codigoProducto']);
 		break;
         
-		case 'ListarProveedores':
-		echo ($pro->ListadoProveedores(""));
+		case 'ListarProductos':
+		echo ($pro->ListadoProductos(""));
 		break;
     
 }

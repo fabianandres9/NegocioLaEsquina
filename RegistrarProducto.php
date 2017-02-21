@@ -83,6 +83,37 @@ $conexion->close(); //cerramos la conexión
            $('#txt_proveedor').val("");
 		}
 
+function cargarTabla(){
+			var action="ListarProductos";
+			var tabla="";
+			$.ajax({
+				data:"action="+action,
+			    url:"./despacho/despachoProducto.php", 
+				type:"POST",
+				dataType: 'json',
+				success:function(data){
+					//Recorrimos el Json
+					$.each(data, function(i,item){
+						//item. el nombre de la columna del array
+						tabla+="<tr>";
+						tabla+="<td>"+item.Codigo+"</td>";
+						tabla+="<td>"+item.Nombre+"</td>";
+						tabla+="<td>"+item.Cantidad+"</td>";
+						tabla+="<td>"+item.Precio+"</td>";
+						tabla+="<td>"+item.Subtipo+"</td>";
+						tabla+="<td>"+item.Estado+"</td>";
+						tabla+="<td>"+item.Proveedor+"</td>";
+						tabla+="<td><a href='#' class='eliminar' codigoProducto='"+item.Codigo+"'>Eliminar</a></td>";
+						tabla+="</tr>";
+					});
+					//cargamos la estructura de la tabla en el tbody
+					$('#cargarTabla').html(tabla);
+				}
+			});
+		}
+
+
+
  </script>
   <script type="text/javascript">
 			$(document).ready(function(){
@@ -97,16 +128,41 @@ $conexion->close(); //cerramos la conexión
 					},
 					success:function(resp){
 						$('#Mensaje').html("<h3>"+resp+"</h3>");
-						LimpiarCajas();				
+						LimpiarCajas();	
+						cargarTabla();			
 					}
 				});
 				return false;
 			});
 		});
 
+
+
+
+
+
+                 	$('.eliminar').live('click',function(){
+				var action="EliminarProducto"
+				$.ajax({
+					data:"action="+action+"&codigoProducto="+$(this).attr('codigoProducto'),
+					url:"./despacho/despachoProducto.php",
+					type:"POST",
+					success:function(resp){
+						if(resp==1){
+							$('#Mensaje').html("<h3>Producto Eliminado Correctamente</h3>");
+							cargarTabla();
+						}else{
+						$('#Mensaje').html("<h3>Producto No existe</h3>");
+						}
+					}
+				});
+			});
+
+
+
     </script>
 </head>
-<body>
+<body onload="cargarTabla()">
 <center>
 <form id="formulario_registroProducto" name="formulario_registroProducto" action="#" method="POST">
 <h1>Registro de Producto</h1><br>
@@ -130,6 +186,25 @@ $conexion->close(); //cerramos la conexión
 
 </form>
 <div id="Mensaje"></div><br><br>
+
+<table border="1">
+	<thead>
+		<th colspan="8">Productos</th>
+		<tr>
+			<td>Codigo</td>
+			<td>Nombre</td>
+			<td>Cantidad</td>
+			<td>Precio</td>
+			<td>Subtipo</td>
+			<td>Estado</td>
+			<td>Proveedor</td>
+			<td colspan="1">Accion</td>
+		</tr>
+	</thead>
+	<tbody id="cargarTabla"></tbody>
+</table>
+
+<br><br>
 
 <a href="Portal.php"><li>Portal</li></a><br><br>
 <a href="RegistrarUsuario.php"><li>Registro Usuario </li></a><br><br>
