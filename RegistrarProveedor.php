@@ -136,8 +136,7 @@
 <a href="RegistrarUsuario.php"><li>Registro Usuario </li></a><br><br>
 <a href="RegistrarProducto.php"><li>Registro Producto</li></a><br><br>
 <a href="RegistrarProveedor.php"><li>Registro Proveedor</li></a><br><br>
-<a href="LoginAdministrador1.php"><li>Ingresar como Administrador</li></a><br><br>
-<a href="LoginAlumno.php"><li>Ingresar como Alumno</li></a><br><br>
+<a href="Calendario.php"><li>Calendario</li></a><br><br>
 
 </center>
 </body>
