@@ -6,7 +6,12 @@
 <script type="text/javascript" src="./js/jquery_import.js"></script>
 
 
+
+
+
 <?php
+
+
 $server     = 'localhost'; //servidor
 $username   = 'root'; //usuario de la base de datos
 $password   = ''; //password del usuario de la base de datos
@@ -36,9 +41,6 @@ else
 }
 $conexion->close(); //cerramos la conexión
 ?>
-
-
-
 
 <?php
 $server     = 'localhost'; //servidor
@@ -72,8 +74,14 @@ $conexion->close(); //cerramos la conexión
 ?>
 
 
+
+
+
+
 	<script type="text/javascript">
  	
+
+
 
     	function LimpiarCajas(){
 		   $('#txt_nombre').val("");
@@ -173,12 +181,16 @@ function cargarTabla(){
 <label>Precio:</label><br>
 <input type="number" name="txt_precio" id="txt_precio" placeholder="Precio"><br><br>
 <label>Tipo Producto:</label><br><br>
-<select name="TipoProducto" id="TipoProducto">
-       <?php echo $ComboTipoProducto; ?>
+<select name="ComboTipoProducto" id="ComboTipoProducto">
+      <?php
+      echo $ComboTipoProducto;
+	  ?>
 </select><br><br>
 <label>Subtipo Producto:</label><br><br>
-<select name="SubtipoProducto" id="SubtipoProducto">
-       <?php echo $ComboSubtipoProducto; ?>
+<select name="ComboSubtipoProducto" id="ComboSubtipoProducto">
+       <?php
+      echo $ComboSubtipoProducto;
+	  ?>
 </select><br><br>
 <label>Proveedor:</label><br><br>
 <input type="text" name="txt_proveedor" id="txt_proveedor" placeholder="Proveedor"><br><br>

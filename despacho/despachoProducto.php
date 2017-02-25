@@ -9,7 +9,7 @@ switch ($_REQUEST['action']) {
 		$pro->setNombre($_REQUEST['txt_nombre']);
         $pro->setCantidad($_REQUEST['txt_cantidad']);
 		$pro->setPrecio($_REQUEST['txt_precio']);
-		$pro->setSubtipo($_REQUEST['SubtipoProducto']);
+		$pro->setSubtipo($_REQUEST['ComboSubtipoProducto']);
 		$pro->setProveedor($_REQUEST['txt_proveedor']);
 		echo $pro->IngresarProducto();
 		break;

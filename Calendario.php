@@ -6,8 +6,7 @@
 </head>
 <body>
 <center>
-<iframe src="https://calendar.google.com/calendar/embed?showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;hl=es_419&amp;bgcolor=%23FFFFFF&amp;src=uik7aq0597fvnkpcp1t73qtscg%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FSantiago" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-
+<iframe src="https://calendar.google.com/calendar/embed?showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;hl=es_419&amp;bgcolor=%2333ccff&amp;src=negociolaesquinaplacilla%40gmail.com&amp;color=%231B887A&amp;src=uik7aq0597fvnkpcp1t73qtscg%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=America%2FSantiago" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 <br><br>
 
 
