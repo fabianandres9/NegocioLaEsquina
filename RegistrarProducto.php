@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-	<title>Alumno</title>
+	<title>Producto</title>
 <script type="text/javascript" src="./js/jquery_import.js"></script>
 
 
@@ -72,10 +72,6 @@ else
 }
 $conexion->close(); //cerramos la conexión
 ?>
-
-
-
-
 
 
 	<script type="text/javascript">

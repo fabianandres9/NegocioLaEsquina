@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-	<title>Alumno</title>
+	<title>Calendario</title>
 </head>
 <body>
 <center>

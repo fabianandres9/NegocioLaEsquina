@@ -4,7 +4,6 @@ require_once '../controlador/Usuario.php';
 $usu=new Usuario();
 session_start();
 switch ($_REQUEST['action']) {
-
 		case 'Login':
         $usu->setRun($_REQUEST['txt_run']);
 		$usu->setPassword($_REQUEST['txt_password']);
